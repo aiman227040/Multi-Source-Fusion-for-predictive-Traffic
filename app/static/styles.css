@@ -1,0 +1,153 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.sub {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#btn-refresh {
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+  background: #38bdf8;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+#btn-refresh:hover {
+  background: #7dd3fc;
+}
+
+.status {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr min(380px, 38vw);
+  min-height: 0;
+}
+
+#map {
+  min-height: 480px;
+}
+
+.panel {
+  background: #fff;
+  border-left: 1px solid #e2e8f0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 1rem;
+}
+
+.detail {
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.detail.empty {
+  color: #94a3b8;
+}
+
+.detail h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.detail section {
+  margin-bottom: 1rem;
+}
+
+.thumb {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge.warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.risk {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  #map {
+    min-height: 320px;
+  }
+
+  .panel {
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+  }
+}

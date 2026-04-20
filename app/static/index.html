@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Predictive Traffic Fusion</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <h1>Hybrid traffic intelligence</h1>
+        <p class="sub">
+          CCTV micro-view · Maps macro baseline · Fusion · LSTM standstill risk (15–45 min)
+        </p>
+      </div>
+      <div class="actions">
+        <button type="button" id="btn-refresh">Refresh all zones</button>
+        <span id="status" class="status"></span>
+      </div>
+    </header>
+    <div class="layout">
+      <div id="map"></div>
+      <aside id="panel" class="panel">
+        <p class="hint">Click a hotspot to inspect fusion output and the latest CCTV thumbnail.</p>
+        <div id="detail" class="detail empty">No zone selected.</div>
+      </aside>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

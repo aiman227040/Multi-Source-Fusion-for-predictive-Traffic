@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+artifacts/*.pt
+yolov8*.pt
+runs/
+*.jpg
+*.png
+.DS_Store
+Ultralytics/
